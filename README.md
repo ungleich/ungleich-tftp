@@ -11,7 +11,7 @@ The TFTP server will load the files located at the container's directory /var/li
 A practical example is the following:
 
 ``` bash
-docker run --name tftp -p 69:69/udp -v /some/path/to/share:/var/lib/tftpboot -d ungleich-tftp
+docker run --name tftp -p 69:69/udp -v /some/path/to/share:/var/lib/tftpboot -d ungleich/ungleich-tftp
 ```
 
 # What does it do?
