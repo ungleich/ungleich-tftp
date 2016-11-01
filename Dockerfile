@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ungleich/ungleich-ipxe
 
 MAINTAINER Carlos Ortigoza "carlos.ortigoza@ungleich.ch"
 
@@ -11,5 +11,4 @@ VOLUME /var/lib/tftpboot
 
 EXPOSE 69/udp
 
-ENTRYPOINT ["in.tftpd"]
-CMD ["--foreground", "--user", "root", "--verbose", "--secure", "/var/lib/tftpboot"]
+ENTRYPOINT ["/root/ipxe_script_builder.sh"]
