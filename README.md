@@ -6,7 +6,7 @@ This is a really simple container that will expose its port 69/udp with a TFTP s
 
 The TFTP server will load the files located at the container's directory /var/lib/tftpboot, which is by default created as a volume.
 
-By default, there is a file available named **pxelinux.0**, which is an iPXE image built with a embedded script, making it to "chainload" to a HTTP server. The hostname of the HTTP server to contact can be specified when the container is run, passing the enviroment variable "HTTP_SERVER".
+By default, there is a file available named **pxelinux.0**, which is an iPXE image built with a embedded script, making it to "chainload" to a HTTP server. The hostname of the HTTP server to contact can be specified when the container is run, passing the environment variable "HTTP_SERVER".
 
 Also, if you don't want to use this default image but other files instead, you can specify any host directory to be mounted on the container, using the option '-v', which bind mounts a volume to the container. 
 
